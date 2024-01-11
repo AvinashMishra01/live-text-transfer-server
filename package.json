@@ -2,7 +2,7 @@
   "name": "Live text transfer server",
   "version": "1.0.0",
   "description": "to transfer text data to everyone",
-  "main": "index.ts",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "build": "npx tsc",
