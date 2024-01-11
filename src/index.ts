@@ -23,6 +23,10 @@ const io = new Server(httpServer, {
   },
 });
 
-io.on("connection", (socket: Socket) => {});
+io.on("connection", (socket: Socket) => {
+  socket.on("getText", (userText: string) => {
+    socket.broadcast.emit("newText", userText);
+  });
+});
 
 httpServer.listen(process.env.PORT || 5000);
